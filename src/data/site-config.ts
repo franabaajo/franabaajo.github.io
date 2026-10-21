@@ -21,6 +21,10 @@ const siteConfig: SiteConfig = {
             href: '/experience'
         },
         {
+            text: 'Education',
+            href: '/education'
+        },
+        {
             text: 'About',
             href: '/about'
         }
@@ -35,6 +39,7 @@ const siteConfig: SiteConfig = {
             href: '/contact'
         },
         { text: 'Experience', href: '/experience' },
+        { text: 'Education', href: '/education' },
         { text: 'Projects', href: '/projects' }
     ],
     socialLinks: [

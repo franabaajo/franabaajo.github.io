@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const certifications = [
+	{
+		title: 'Citi Markets Quantitative Analysis (MQA) Job Simulation',
+		issuer: 'Forage · Citi',
+		date: '2 August 2026',
+		description: 'Financial mathematics, commodity pricing, securities structuring, hedging, and market-risk management.'
+	},
+	{
+		title: 'Citi Markets Sales & Trading Job Simulation',
+		issuer: 'Forage · Citi',
+		date: '3 August 2026',
+		description: 'Market-meeting preparation, market wrap-ups, trade pitching, and risk hedging.'
+	},
+	{
+		title: 'Project Management Fundamentals',
+		issuer: 'IBM SkillsBuild',
+		date: '7 October 2026',
+		description: 'Foundational project-management training.',
+		href: 'https://www.credly.com/go/Ncn79D2L',
+		linkText: 'Verify credential'
+	},
+	{
+		title: 'KICKOFF Predictive',
+		issuer: 'Project Management Institute (PMI)',
+		date: 'October 2026',
+		description: 'Predictive project-management training.'
+	},
+	{
+		title: 'Hugging Face Agents Course',
+		issuer: 'Hugging Face',
+		date: '8 October 2026',
+		description: 'AI-agent development with tool use, agentic RAG, and multimodal workflows.',
+		href: '/projects/gaia-research-agent/',
+		linkText: 'View course project'
+	}
+];
+
+const languages = [
+	{ language: 'Spanish', level: 'Native', marker: 'ES' },
+	{ language: 'English', level: 'Advanced', marker: 'EN' },
+	{ language: 'French', level: 'Basic', marker: 'FR' },
+	{ language: 'Dutch', level: 'Basic', marker: 'NL' }
+];
+---
+
+<BaseLayout
+	title="Education, Certifications and Languages"
+	description="Francisco Abajo Lis's two bachelor's degrees, professional training, certificates, and languages."
+	showHeader={false}
+>
+	<header class="mb-14 max-w-4xl sm:mb-20">
+		<p class="mb-3 text-xs font-medium tracking-[0.18em] uppercase opacity-60">Academic foundation</p>
+		<h1 class="font-serif text-4xl leading-tight sm:text-6xl">Education</h1>
+		<p class="mt-6 text-lg leading-relaxed opacity-75 sm:text-xl">
+			Two technical bachelor's degrees, complemented by focused training across quantitative finance, project management, and AI agents.
+		</p>
+	</header>
+
+	<section class="mb-20 sm:mb-28" aria-labelledby="degrees-heading">
+		<h2 id="degrees-heading" class="mb-8 font-serif text-3xl sm:text-4xl">Degrees</h2>
+		<article class="education-card overflow-hidden rounded-3xl border border-main/15 bg-muted">
+			<div class="grid border-b border-main/10 md:grid-cols-[15rem_1fr]">
+				<div class="brand-tile flex min-h-40 items-center justify-center bg-white p-8">
+					<img class="h-auto w-full max-w-52" src="/brands/tue.svg" alt="Eindhoven University of Technology" />
+				</div>
+				<div class="flex flex-col justify-center p-7 sm:p-10">
+					<p class="text-sm font-medium tracking-wide text-[color:var(--accent)]">2023–2026 · Eindhoven · 225 ECTS</p>
+					<h3 class="mt-2 font-serif text-3xl sm:text-4xl">Two Bachelor's Degrees</h3>
+					<p class="mt-3 max-w-3xl leading-relaxed opacity-75">Completed in parallel at Eindhoven University of Technology in three years.</p>
+				</div>
+			</div>
+			<div class="grid gap-5 p-5 sm:grid-cols-2 sm:p-8">
+				<section class="degree-card relative overflow-hidden rounded-2xl border border-main/10 bg-main p-6 sm:p-8">
+					<p class="text-xs font-semibold tracking-[0.18em] uppercase text-[color:var(--accent)]">Degree 01</p>
+					<h3 class="mt-3 font-serif text-3xl leading-tight sm:text-4xl">BSc Applied Mathematics</h3>
+					<div class="mt-7 border-t border-main/10 pt-5">
+						<p class="text-xs tracking-[0.14em] uppercase opacity-55">Final average</p>
+						<p class="mt-1 font-serif text-3xl text-[color:var(--accent)]">7.97 / 10</p>
+					</div>
+				</section>
+				<section class="degree-card relative overflow-hidden rounded-2xl border border-main/10 bg-main p-6 sm:p-8">
+					<p class="text-xs font-semibold tracking-[0.18em] uppercase text-[color:var(--accent)]">Degree 02</p>
+					<h3 class="mt-3 font-serif text-3xl leading-tight sm:text-4xl">BSc Applied Physics</h3>
+					<div class="mt-7 border-t border-main/10 pt-5">
+						<p class="text-xs tracking-[0.14em] uppercase opacity-55">Final average</p>
+						<p class="mt-1 font-serif text-3xl text-[color:var(--accent)]">7.91 / 10</p>
+					</div>
+				</section>
+			</div>
+			<div class="border-t border-main/10 px-7 py-6 sm:px-8">
+				<p class="leading-relaxed opacity-80">
+					The combined Bachelor End Project received <strong>9.0/10 in both degree programmes</strong>.
+				</p>
+			</div>
+		</article>
+	</section>
+
+	<section class="mb-20 sm:mb-28" aria-labelledby="certifications-heading">
+		<div class="mb-8 max-w-3xl">
+			<p class="mb-2 text-xs font-medium tracking-[0.18em] uppercase opacity-60">Continuous learning</p>
+			<h2 id="certifications-heading" class="font-serif text-3xl sm:text-4xl">Certifications &amp; Training</h2>
+		</div>
+		<div class="grid gap-5 md:grid-cols-2">
+			{certifications.map((certificate, index) => (
+				<article class:list={['certificate-card flex flex-col rounded-3xl border border-main/15 bg-muted p-6 sm:p-8', { 'md:col-span-2 md:grid md:grid-cols-[1fr_auto] md:items-end md:gap-12': index === certifications.length - 1 }]}>
+					<div>
+						<div class="flex flex-wrap items-center justify-between gap-2 text-xs font-medium tracking-wide text-[color:var(--accent)]">
+							<span>{certificate.issuer}</span>
+							<span>{certificate.date}</span>
+						</div>
+						<h3 class="mt-4 font-serif text-2xl leading-tight sm:text-3xl">{certificate.title}</h3>
+						<p class="mt-4 leading-relaxed opacity-75">{certificate.description}</p>
+					</div>
+					{certificate.href && (
+						<a
+							class="mt-6 inline-flex w-fit items-center border-b border-main/40 pb-0.5 font-serif italic hover:border-main"
+							href={certificate.href}
+							target={certificate.href.startsWith('http') ? '_blank' : undefined}
+							rel={certificate.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+						>
+							{certificate.linkText} →
+						</a>
+					)}
+				</article>
+			))}
+		</div>
+	</section>
+
+	<section class="mb-20 sm:mb-28" aria-labelledby="languages-heading">
+		<div class="mb-8 max-w-3xl">
+			<p class="mb-2 text-xs font-medium tracking-[0.18em] uppercase opacity-60">Communication</p>
+			<h2 id="languages-heading" class="font-serif text-3xl sm:text-4xl">Languages</h2>
+		</div>
+		<div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+			{languages.map((item) => (
+				<article class="rounded-3xl border border-main/15 bg-muted p-5 sm:p-7">
+					<p class="font-serif text-3xl text-[color:var(--accent)] opacity-45">{item.marker}</p>
+					<h3 class="mt-8 font-serif text-2xl">{item.language}</h3>
+					<p class="mt-1 text-sm opacity-65">{item.level}</p>
+				</article>
+			))}
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	.education-card,
+	.certificate-card {
+		box-shadow: 0 18px 50px color-mix(in srgb, var(--text-main) 7%, transparent);
+	}
+
+	.brand-tile img {
+		max-height: 5rem;
+	}
+
+	.degree-card::after {
+		position: absolute;
+		right: -2.5rem;
+		bottom: -4rem;
+		width: 9rem;
+		height: 9rem;
+		border-radius: 9999px;
+		background: color-mix(in srgb, var(--accent) 9%, transparent);
+		content: '';
+	}
+</style>
