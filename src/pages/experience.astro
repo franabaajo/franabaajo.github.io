@@ -39,26 +39,60 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 				</div>
 			</article>
 
-			<article class="experience-card rounded-3xl border border-main/15 bg-muted p-7 sm:p-9">
-				<div class="brand-tile mb-7 flex min-h-28 items-center justify-center rounded-2xl bg-white p-6">
-					<img class="h-auto w-full max-w-52" src="/brands/tue.svg" alt="Eindhoven University of Technology" />
+			<article class="experience-card rounded-3xl border border-main/15 bg-muted p-7 sm:p-9 lg:col-span-2">
+				<div class="grid gap-8 md:grid-cols-[12rem_1fr] md:items-start">
+					<div>
+						<div class="brand-tile flex min-h-32 items-center justify-center rounded-2xl bg-white p-6">
+							<img class="h-auto w-full max-w-52" src="/brands/tue.svg" alt="Eindhoven University of Technology" />
+						</div>
+						<p class="mt-4 text-sm font-medium tracking-wide text-[color:var(--accent)]">2024–2026 · Eindhoven</p>
+					</div>
+					<div>
+						<p class="text-xs font-medium tracking-[0.16em] uppercase opacity-60">Eindhoven University of Technology</p>
+						<h3 class="mt-2 font-serif text-3xl">Teaching &amp; Course Support</h3>
+						<div class="mt-7 grid gap-4 sm:grid-cols-2">
+							<section class="role-detail rounded-2xl border border-main/10 bg-main/55 p-5">
+								<h4 class="font-serif text-xl">Calculus I Tutor</h4>
+								<p class="mt-2 text-sm leading-relaxed opacity-75">
+									Mentored two groups of pre-master's students in Calculus I, providing weekly instruction and correcting their homework and exams.
+								</p>
+							</section>
+							<section class="role-detail rounded-2xl border border-main/10 bg-main/55 p-5">
+								<h4 class="font-serif text-xl">Course Assistant</h4>
+								<p class="mt-2 text-sm leading-relaxed opacity-75">
+									Helped improve the new Applied Physics course Physics of Transport Phenomena (32PTP) by providing feedback in meetings with professors and through written reports.
+								</p>
+							</section>
+							<section class="role-detail rounded-2xl border border-main/10 bg-main/55 p-5">
+								<h4 class="font-serif text-xl">Thermodynamics Teaching Assistant</h4>
+								<p class="mt-2 text-sm leading-relaxed opacity-75">
+									Mentored second-year Applied Physics students throughout the main Thermodynamics course project.
+								</p>
+							</section>
+							<section class="role-detail rounded-2xl border border-main/10 bg-main/55 p-5">
+								<h4 class="font-serif text-xl">Regression Models Teaching Assistant</h4>
+								<p class="mt-2 text-sm leading-relaxed opacity-75">
+									Supported students during instruction sessions with regression theory and an applied project in R.
+								</p>
+							</section>
+						</div>
+					</div>
 				</div>
-				<p class="text-sm font-medium tracking-wide text-[color:var(--accent)]">2024–2026 · Eindhoven</p>
-				<h3 class="mt-2 font-serif text-3xl">Teaching &amp; Course Support</h3>
-				<p class="mt-4 leading-relaxed opacity-80">
-					Supported students and teaching teams across regression modelling, calculus, thermodynamics, and transport phenomena through tutoring, assessment, exercises, and structured feedback.
-				</p>
 			</article>
 
-			<article class="experience-card rounded-3xl border border-main/15 bg-muted p-7 sm:p-9">
-				<div class="mb-7 flex min-h-28 items-center justify-center rounded-2xl border border-main/10 bg-main p-6">
-					<span class="font-serif text-4xl italic text-[color:var(--accent)]">Mentoring</span>
+			<article class="experience-card rounded-3xl border border-main/15 bg-muted p-7 sm:p-9 lg:col-span-2">
+				<div class="grid gap-8 md:grid-cols-[12rem_1fr] md:items-center">
+					<div class="flex min-h-28 items-center justify-center rounded-2xl border border-main/10 bg-main p-6">
+						<span class="font-serif text-3xl italic text-[color:var(--accent)]">Unibuddy</span>
+					</div>
+					<div>
+						<p class="text-sm font-medium tracking-wide text-[color:var(--accent)]">September 2024–June 2026</p>
+						<h3 class="mt-2 font-serif text-3xl">Student Ambassador</h3>
+						<p class="mt-4 max-w-3xl leading-relaxed opacity-80">
+							Spoke with prospective students through Unibuddy, providing information about TU/e, programme-specific guidance, and answers about student life.
+						</p>
+					</div>
 				</div>
-				<p class="text-sm font-medium tracking-wide text-[color:var(--accent)]">September 2024–June 2026</p>
-				<h3 class="mt-2 font-serif text-3xl">Student Mentor</h3>
-				<p class="mt-4 leading-relaxed opacity-80">
-					Helped prospective and first-year students navigate programme choices and university life in an international academic environment through TU/e and Unibuddy.
-				</p>
 			</article>
 		</div>
 	</section>
