@@ -1,22 +1,50 @@
 ---
 import { type CollectionEntry } from 'astro:content';
 import ArrowRight from '../assets/icons/arrow-right.svg';
+import CustomImage from './CustomImage.astro';
 
 type Props = { project: CollectionEntry<'projects'>; class?: string; headingLevel?: 'h2' | 'h3' };
 
 const { project, class: className, headingLevel = 'h2' } = Astro.props;
-const { title, description } = project.data;
+const { title, description, cover, technologies } = project.data;
 const TitleTag = headingLevel;
 ---
 
-<a class:list={['group flex items-start justify-between gap-8', className]} href={`/projects/${project.id}/`}>
-    <div class="grow">
-        <TitleTag class="font-serif text-xl leading-tight font-medium group-hover:underline group-hover:decoration-dashed group-hover:decoration-1 group-hover:underline-offset-4 sm:text-2xl">
+<a
+    class:list={[
+        'project-card group flex h-full flex-col overflow-hidden rounded-3xl border border-main/15 bg-muted transition duration-300 hover:-translate-y-1 hover:shadow-xl',
+        className
+    ]}
+    href={`/projects/${project.id}/`}
+>
+    {cover?.src && (
+        <figure class="aspect-[16/10] overflow-hidden border-b border-main/10 bg-white">
+            <CustomImage
+                class:list={[
+                    'h-full w-full transition duration-500 group-hover:scale-[1.025]',
+                    project.id === 'data-driven-flow-rom' ? 'object-cover object-left' : 'object-cover'
+                ]}
+                {...cover}
+                format={cover.src.format === 'svg' ? 'svg' : undefined}
+                widths={[480, 640, 960, 1280]}
+                sizes="(min-width: 1024px) 560px, calc(100vw - 32px)"
+            />
+        </figure>
+    )}
+    <div class="flex grow flex-col p-6 sm:p-8">
+        <TitleTag class="font-serif text-2xl leading-tight font-medium sm:text-3xl">
             {title}
         </TitleTag>
-        {description && <div class="mt-1 text-sm leading-normal">{description}</div>}
-    </div>
-    <div class="hidden font-serif italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:shrink-0 sm:items-center sm:gap-1">
-        View Project <ArrowRight class="h-4 w-4 fill-current" />
+        {description && <div class="mt-3 text-sm leading-relaxed opacity-80 sm:text-base">{description}</div>}
+        {technologies.length > 0 && (
+            <ul class="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
+                {technologies.slice(0, 4).map((technology) => (
+                    <li class="rounded-full border border-main/15 px-3 py-1 text-xs">{technology}</li>
+                ))}
+            </ul>
+        )}
+        <div class="mt-7 inline-flex items-center gap-1 font-serif italic">
+            Explore project <ArrowRight class="h-4 w-4 fill-current transition-transform group-hover:translate-x-1" />
+        </div>
     </div>
 </a>

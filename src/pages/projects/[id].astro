@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
+import CustomImage from '../../components/CustomImage.astro';
 import ProjectPreview from '../../components/ProjectPreview.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
@@ -24,22 +25,43 @@ type Props = {
 };
 
 const { project, prevProject, nextProject } = Astro.props;
-const { title, description, seo } = project.data;
+const { title, description, cover, technologies, seo } = project.data;
 const { Content } = await render(project);
 ---
 
 <BaseLayout
     title={seo?.title ?? title}
     description={seo?.description ?? description}
-    image={seo?.image}
+    image={seo?.image ?? cover}
     pageType={seo?.pageType ?? 'article'}
     showHeader={false}
 >
     <article class="mb-16 sm:mb-24">
-        <header class="mb-8">
-            <h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">{title}</h1>
+        <header class="mb-10 max-w-4xl">
+            <p class="mb-3 text-xs font-medium tracking-[0.18em] uppercase opacity-60">Project</p>
+            <h1 class="font-serif text-4xl leading-[1.05] font-medium sm:text-6xl">{title}</h1>
+            {description && <p class="mt-6 max-w-3xl text-lg leading-relaxed opacity-75 sm:text-xl">{description}</p>}
+            {technologies.length > 0 && (
+                <ul class="mt-6 flex flex-wrap gap-2" aria-label="Technologies">
+                    {technologies.map((technology) => (
+                        <li class="rounded-full border border-main/20 px-3 py-1 text-xs sm:text-sm">{technology}</li>
+                    ))}
+                </ul>
+            )}
         </header>
-        <div class="prose sm:prose-lg max-w-none">
+        {cover?.src && (
+            <figure class="mb-12 overflow-hidden rounded-3xl border border-main/15 bg-white shadow-lg sm:mb-16">
+                <CustomImage
+                    class="h-auto w-full"
+                    {...cover}
+                    format={cover.src.format === 'svg' ? 'svg' : undefined}
+                    widths={[640, 960, 1280, 1600, 2048]}
+                    sizes="(min-width: 1216px) 1152px, calc(100vw - 32px)"
+                    loading="eager"
+                />
+            </figure>
+        )}
+        <div class="prose sm:prose-lg mx-auto max-w-3xl">
             <Content />
         </div>
     </article>

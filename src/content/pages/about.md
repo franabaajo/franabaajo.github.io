@@ -1,43 +1,38 @@
 ---
 title: About
 seo:
-  title: About Me
-  description: Learn more about the person behind the website and embark on a journey of inspiration and shared experiences.
-  image:
-    src: '../../assets/images/about.jpg'
-    alt: A person sitting at a desk in front of a computer
+  title: About Francisco Abajo Lis
+  description: Learn about Francisco's background, interests, and approach to quantitative and technical problem solving.
 ---
 
-![Alt text for image](../../assets/images/about.jpg)
+I am an Applied Mathematics and Applied Physics graduate from Eindhoven University of Technology, now based in Madrid. I like work that combines rigorous thinking with a tangible result: a useful analysis, a trustworthy model, a cleaner workflow, or software that makes a complicated task easier to repeat.
 
-**Note!:** This about page is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+My background is intentionally broad. I have developed data-driven models for turbulent flows, improved Python-supported validation workflows during an internship at ASML, and built an AI research agent with LangGraph. Across those settings, the common thread is learning a complex system quickly, structuring the problem, and building something reliable around it.
 
-## Ethan Donovan - Web Developer based in Estonia
+## What I am looking for
 
-**Greetings!** I'm Ethan Donovan, a passionate web developer residing in the picturesque landscapes of [Estonia](https://en.wikipedia.org/wiki/Estonia). With a keen eye for design and a love for crafting seamless digital experiences, I bring a unique blend of creativity and technical expertise to the world of web development.
+I am exploring graduate and junior opportunities where quantitative reasoning and software meet real decisions. My interests include:
 
-## Skills and Expertise
+- Quantitative and data analysis
+- Modelling, simulation, and optimisation
+- Risk and decision-support problems
+- AI-enabled tools and workflow automation
+- Python-based technical and analytical development
 
-I specialize in front-end and back-end development, utilizing the latest technologies to build responsive and user-friendly websites. My proficiency includes **HTML**, **CSS**, **JavaScript**, and frameworks such as **Astro.js** for dynamic and interactive user interfaces. On the server side, I'm well-versed in Node.js and have experience with database management systems like MongoDB.
+I am more interested in the quality of the problem and the opportunity to learn than in fitting into one narrow label.
 
-## Innovation and Problem-Solving
+## Skills
 
-I thrive on solving complex problems and transforming ideas into functional, elegant websites. Whether it's optimizing performance, implementing new features, or troubleshooting issues, I approach each challenge with enthusiasm and a commitment to delivering high-quality solutions.
+**Programming:** Python, Julia, and R, with familiarity in SQL, MATLAB, and Bash.
 
-## Global Perspective, Local Impact
+**Data and modelling:** statistics, regression, numerical methods, model validation, predictive-model evaluation, parameter studies, error analysis, and data visualisation.
 
-Living in Estonia has not only influenced my appreciation for nature and culture but has also shaped my approach to web development. I understand the importance of creating digital solutions that resonate with local audiences while maintaining a global perspective.
+**Software and automation:** Git, Linux, automated testing, Robot Framework, JSON, and reproducible configuration-driven workflows.
 
-## Continuous Learning
+**AI development:** LangGraph, agentic retrieval, tool routing, multimodal workflows, provider integrations, and regression testing.
 
-The dynamic nature of the tech industry inspires me to stay up-to-date with the latest trends and advancements. I'm always eager to expand my skill set and embrace emerging technologies that enhance the functionality and aesthetics of the websites I create.
+**Languages:** Spanish (native), English (advanced), French (basic), and Dutch (basic).
 
-## Collaboration and Communication
+## How I work
 
-I believe in the power of collaboration and effective communication. Whether working with clients, designers, or fellow developers, I value clear communication to ensure the success of every project.
-
-## Get in Touch
-
-Are you looking to elevate your online presence or bring your digital ideas to life? I'd love to hear from you! Feel free to reach out for collaboration, consultation, or just a friendly chat about all things web development.
-
-_Let's build something amazing together!_
+I value analytical clarity, careful validation, and maintainable implementation. I am comfortable moving between mathematical ideas, experimental code, documentation, and communication with people from different technical backgrounds.

@@ -10,28 +10,49 @@ const { title, image, text, actions } = Astro.props;
 ---
 
 {(title || image?.src || text || (actions && actions.length > 0)) && (
-    <section class="mb-16 flex w-full flex-col gap-8 sm:mb-24">
-        {title && <h1 class="font-serif text-3xl leading-tight font-medium sm:text-5xl sm:leading-tight">{title}</h1>}
+    <section
+        class:list={[
+            'hero-panel mb-20 w-full overflow-hidden rounded-[2rem] border border-main/15 px-6 py-8 sm:mb-28 sm:px-10 sm:py-12 lg:px-14 lg:py-14',
+            { 'grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-16': image?.src }
+        ]}
+    >
+        <div class="order-2 lg:order-1">
+            {title && <h1 class="font-serif text-4xl leading-[1.04] font-medium sm:text-6xl">{title}</h1>}
+            {text && <div class="prose sm:prose-lg mt-8 max-w-2xl" set:html={marked.parse(text)} />}
+            {actions && actions.length > 0 && (
+                <div class="mt-8 flex flex-wrap gap-4">
+                    {actions.map((action) => (
+                        <Button href={action.href}>{action.text}</Button>
+                    ))}
+                </div>
+            )}
+        </div>
         {image?.src && (
-            <figure>
-                <CustomImage
-                    class="w-full"
-                    {...image}
-                    widths={[480, 640, 768, 1024, 1536]}
-                    sizes="(min-width: 832px) 768px, calc(100vw - 32px)"
-                    fetchpriority="high"
-                    loading="eager"
-                />
+            <figure class="order-1 mx-auto w-full max-w-64 lg:order-2 lg:max-w-80">
+                <div class="portrait-ring aspect-square overflow-hidden rounded-full border border-main/20 p-2 shadow-2xl">
+                    <CustomImage
+                        class="h-full w-full translate-y-3 scale-[1.18] rounded-full object-cover"
+                        {...image}
+                        widths={[320, 480, 640]}
+                        sizes="(min-width: 1024px) 320px, 256px"
+                        fetchpriority="high"
+                        loading="eager"
+                    />
+                </div>
                 {image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{image.caption}</figcaption>}
             </figure>
         )}
-        {text && <div class="prose sm:prose-lg max-w-none" set:html={marked.parse(text)} />}
-        {actions && actions.length > 0 && (
-            <div class="flex flex-wrap gap-4">
-                {actions.map((action) => (
-                    <Button href={action.href}>{action.text}</Button>
-                ))}
-            </div>
-        )}
     </section>
 )}
+
+<style>
+    .hero-panel {
+        background:
+            radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 32%),
+            linear-gradient(135deg, var(--bg-muted), var(--bg-main));
+    }
+
+    .portrait-ring {
+        background: color-mix(in srgb, var(--accent) 16%, var(--bg-main));
+    }
+</style>

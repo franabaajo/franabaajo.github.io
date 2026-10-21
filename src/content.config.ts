@@ -17,6 +17,8 @@ const seoSchema = (image: ImageFunction) =>
     });
 
 const blog = defineCollection({
+    // Retain the theme's example posts as source material, but no public blog
+    // routes are generated until Francisco decides to start writing.
     loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
     schema: ({ image }) =>
         z.object({
@@ -40,13 +42,15 @@ const pages = defineCollection({
 });
 
 const projects = defineCollection({
-    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
+    loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/portfolio-projects' }),
     schema: ({ image }) =>
         z.object({
             title: z.string(),
             description: z.string().optional(),
             publishDate: z.coerce.date(),
             isFeatured: z.boolean().default(false),
+            cover: imageSchema(image).optional(),
+            technologies: z.array(z.string()).default([]),
             seo: seoSchema(image).optional()
         })
 });

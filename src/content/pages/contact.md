@@ -2,13 +2,12 @@
 title: Get in touch
 seo:
   title: Contact
-  description: Get in touch through email or social media! Let me know how I can help.
+  description: Connect with Francisco Abajo Lis through LinkedIn or GitHub.
 ---
 
-Thank you for reaching out! Whether you have a question, a suggestion, or just want to share your thoughts, I'm all ears. Feel free to get in touch through any of the methods below:
+I am open to graduate and junior opportunities involving quantitative analysis, data, modelling, optimisation, AI, and technical automation.
 
-_Email:_
-Feel free to drop me an email at [example@example.com](mailto:example@example.com), and I'll do my best to respond as soon as possible.
+- [Connect with me on LinkedIn](https://www.linkedin.com/in/francisco-abajo-lis/)
+- [Explore my work on GitHub](https://github.com/franabaajo)
 
-_Social Media:_
-Connect with me on social media as well. Find me on [Twitter](https://twitter.com) or [LinkedIn](https://www.linkedin.com/).
+I have left email and phone details off this public version of the site for now. They can be added later once the preferred public contact details are confirmed.

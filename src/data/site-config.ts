@@ -1,20 +1,12 @@
-import avatar from '../assets/images/avatar.jpg';
-import hero from '../assets/images/hero.jpg';
+import profilePhoto from '../assets/images/profile-francisco-abajo.jpg';
 import type { SiteConfig } from '../types';
 
 const siteConfig: SiteConfig = {
     website: 'https://franabaajo.github.io',
-    avatar: {
-        src: avatar,
-        alt: 'Ethan Donovan'
-    },
-    title: 'Dante',
-    subtitle: 'Minimal Astro.js theme',
-    description: 'Astro.js and Tailwind CSS theme for blog and portfolio by justgoodui.com',
-    image: {
-        src: '/dante-preview.jpg',
-        alt: 'Dante - Astro.js and Tailwind CSS theme'
-    },
+    title: 'Francisco Abajo Lis',
+    subtitle: 'Applied Mathematics & Applied Physics | Data, Modelling & Automation',
+    description:
+        'Portfolio of Francisco Abajo Lis, an Applied Mathematics and Applied Physics graduate interested in quantitative analysis, data, modelling, optimisation, AI, and automation.',
     headerNavLinks: [
         {
             text: 'Home',
@@ -25,12 +17,12 @@ const siteConfig: SiteConfig = {
             href: '/projects'
         },
         {
-            text: 'Blog',
-            href: '/blog'
+            text: 'Experience',
+            href: '/experience'
         },
         {
-            text: 'Tags',
-            href: '/tags'
+            text: 'About',
+            href: '/about'
         }
     ],
     footerNavLinks: [
@@ -42,50 +34,39 @@ const siteConfig: SiteConfig = {
             text: 'Contact',
             href: '/contact'
         },
-        {
-            text: 'Terms',
-            href: '/terms'
-        },
-        {
-            text: 'Download theme',
-            href: 'https://github.com/JustGoodUI/dante-astro-theme'
-        }
+        { text: 'Experience', href: '/experience' },
+        { text: 'Projects', href: '/projects' }
     ],
     socialLinks: [
         {
-            text: 'Dribbble',
-            href: 'https://dribbble.com/'
+            text: 'GitHub',
+            href: 'https://github.com/franabaajo'
         },
         {
-            text: 'Instagram',
-            href: 'https://instagram.com/'
-        },
-        {
-            text: 'X/Twitter',
-            href: 'https://twitter.com/'
+            text: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/francisco-abajo-lis/'
         }
     ],
     hero: {
-        title: 'Hi There & Welcome to My Corner of the Web!',
-        text: "I'm **Ethan Donovan**, a web developer at Amazing Studio, dedicated to the realms of collaboration and artificial intelligence.\nMy approach involves embracing intuition, conducting just enough research, and leveraging aesthetics as a catalyst for exceptional products.\nI have a profound appreciation for top-notch software, visual design, and the principles of product-led growth.\n\nFeel free to explore some of my coding endeavors on [GitHub](https://github.com/JustGoodUI/dante-astro-theme) or follow me on [Twitter/X](https://twitter.com/justgoodui).",
+        title: 'Quantitative problem solving, from models to working systems.',
+        text: "I'm **Francisco Abajo Lis**, an Applied Mathematics and Applied Physics graduate based in Madrid. I enjoy turning complex, open-ended problems into clear analyses, dependable software, and practical automation.\n\nI'm interested in early-career opportunities across **quantitative analysis, data, modelling, optimisation, AI, and technical automation**. My experience spans data-driven flow modelling, software validation at ASML, and agentic AI development.",
         image: {
-            src: hero,
-            alt: 'A person sitting at a desk in front of a computer'
+            src: profilePhoto,
+            alt: 'Portrait of Francisco Abajo Lis'
         },
         actions: [
             {
-                text: 'Get in Touch',
-                href: '/contact'
+                text: 'Explore my projects',
+                href: '/projects'
+            },
+            {
+                text: 'View experience',
+                href: '/experience'
             }
         ]
     },
     subscribe: {
-        enabled: true,
-        title: 'Subscribe to Dante Newsletter',
-        text: 'One update per week. All the latest posts directly in your inbox.',
-        form: {
-            action: '#'
-        }
+        enabled: false
     },
     postsPerPage: 8,
     projectsPerPage: 8

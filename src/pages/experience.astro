@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="Experience and Education"
+	description="Francisco Abajo Lis's experience in software validation, teaching, mentoring, applied mathematics, and applied physics."
+	showHeader={false}
+>
+	<header class="mb-14 max-w-3xl sm:mb-20">
+		<p class="mb-3 text-xs font-medium tracking-[0.18em] uppercase opacity-60">Background</p>
+		<h1 class="font-serif text-4xl leading-tight sm:text-6xl">Experience &amp; Education</h1>
+		<p class="mt-6 text-lg leading-relaxed opacity-75 sm:text-xl">
+			A quantitative foundation shaped by research, engineering practice, teaching, and working across technical disciplines.
+		</p>
+	</header>
+
+	<section class="mb-20 sm:mb-28" aria-labelledby="experience-heading">
+		<h2 id="experience-heading" class="mb-8 font-serif text-3xl sm:text-4xl">Experience</h2>
+		<div class="grid gap-6 lg:grid-cols-2">
+			<article class="experience-card rounded-3xl border border-main/15 bg-muted p-7 sm:p-9 lg:col-span-2">
+				<div class="grid gap-8 md:grid-cols-[12rem_1fr] md:items-start">
+					<div class="brand-tile flex min-h-32 items-center justify-center rounded-2xl bg-white p-6">
+						<img class="h-auto w-full max-w-40" src="/brands/asml.svg" alt="ASML" />
+					</div>
+					<div>
+						<p class="text-sm font-medium tracking-wide text-[color:var(--accent)]">September 2025–March 2026 · Veldhoven</p>
+						<h3 class="mt-2 font-serif text-3xl">Software Engineer Intern</h3>
+						<p class="mt-4 max-w-3xl leading-relaxed opacity-80">
+							Improved the maintainability, reliability, and efficiency of Python-supported software-validation workflows for critical EUV functionality in a digital-twin environment.
+						</p>
+						<ul class="mt-6 grid gap-3 text-sm leading-relaxed sm:grid-cols-2 sm:text-base">
+							<li>Python and Robot Framework validation</li>
+							<li>Approximately 70% less Python code</li>
+							<li>Approximately 45% simpler test-suite structure</li>
+							<li>Digital-twin restarts reduced by about two-thirds</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+
+			<article class="experience-card rounded-3xl border border-main/15 bg-muted p-7 sm:p-9">
+				<div class="brand-tile mb-7 flex min-h-28 items-center justify-center rounded-2xl bg-white p-6">
+					<img class="h-auto w-full max-w-52" src="/brands/tue.svg" alt="Eindhoven University of Technology" />
+				</div>
+				<p class="text-sm font-medium tracking-wide text-[color:var(--accent)]">2024–2026 · Eindhoven</p>
+				<h3 class="mt-2 font-serif text-3xl">Teaching &amp; Course Support</h3>
+				<p class="mt-4 leading-relaxed opacity-80">
+					Supported students and teaching teams across regression modelling, calculus, thermodynamics, and transport phenomena through tutoring, assessment, exercises, and structured feedback.
+				</p>
+			</article>
+
+			<article class="experience-card rounded-3xl border border-main/15 bg-muted p-7 sm:p-9">
+				<div class="mb-7 flex min-h-28 items-center justify-center rounded-2xl border border-main/10 bg-main p-6">
+					<span class="font-serif text-4xl italic text-[color:var(--accent)]">Mentoring</span>
+				</div>
+				<p class="text-sm font-medium tracking-wide text-[color:var(--accent)]">September 2024–June 2026</p>
+				<h3 class="mt-2 font-serif text-3xl">Student Mentor</h3>
+				<p class="mt-4 leading-relaxed opacity-80">
+					Helped prospective and first-year students navigate programme choices and university life in an international academic environment through TU/e and Unibuddy.
+				</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="mb-20 sm:mb-28" aria-labelledby="education-heading">
+		<h2 id="education-heading" class="mb-8 font-serif text-3xl sm:text-4xl">Education</h2>
+		<article class="overflow-hidden rounded-3xl border border-main/15 bg-muted">
+			<div class="grid md:grid-cols-[15rem_1fr]">
+				<div class="brand-tile flex min-h-48 items-center justify-center bg-white p-8">
+					<img class="h-auto w-full max-w-52" src="/brands/tue.svg" alt="Eindhoven University of Technology" />
+				</div>
+				<div class="p-7 sm:p-10">
+					<p class="text-sm font-medium tracking-wide text-[color:var(--accent)]">2023–2026 · 225 ECTS</p>
+					<h3 class="mt-2 font-serif text-3xl sm:text-4xl">BSc Applied Mathematics &amp; BSc Applied Physics</h3>
+					<p class="mt-5 max-w-3xl leading-relaxed opacity-80">
+						Completed the double bachelor's programme in three years, with final averages of 7.97/10 and 7.91/10. The combined Bachelor End Project received 9.0/10 in both programmes.
+					</p>
+				</div>
+			</div>
+		</article>
+	</section>
+
+	<section class="rounded-3xl border border-main/15 px-7 py-9 sm:px-10" aria-labelledby="interests-heading">
+		<p class="mb-3 text-xs font-medium tracking-[0.18em] uppercase opacity-60">Next step</p>
+		<h2 id="interests-heading" class="font-serif text-3xl sm:text-4xl">Where I want to contribute</h2>
+		<p class="mt-5 max-w-4xl text-lg leading-relaxed opacity-80">
+			Quantitative analysis · Data · Modelling · Optimisation · Risk · AI-enabled tools · Technical automation
+		</p>
+	</section>
+</BaseLayout>
+
+<style>
+	.experience-card {
+		box-shadow: 0 18px 50px color-mix(in srgb, var(--text-main) 7%, transparent);
+	}
+
+	.brand-tile img {
+		max-height: 5rem;
+	}
+</style>
