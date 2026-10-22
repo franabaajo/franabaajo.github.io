@@ -5,7 +5,7 @@ seo:
   description: Connect with Francisco Abajo Lis through LinkedIn or GitHub.
 ---
 
-I am open to graduate and junior opportunities involving quantitative analysis, data, modelling, optimisation, AI, and technical automation.
+I am open to graduate and junior opportunities involving quantitative analysis, data, modelling, finance, AI, and technical automation.
 
 - [Connect with me on LinkedIn](https://www.linkedin.com/in/francisco-abajo-lis/)
 - [Explore my work on GitHub](https://github.com/franabaajo)

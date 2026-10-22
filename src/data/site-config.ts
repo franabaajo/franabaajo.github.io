@@ -6,7 +6,7 @@ const siteConfig: SiteConfig = {
     title: 'Francisco Abajo Lis',
     subtitle: 'Applied Mathematics & Applied Physics | Data, Modelling & Automation',
     description:
-        'Portfolio of Francisco Abajo Lis, an Applied Mathematics and Applied Physics graduate interested in quantitative analysis, data, modelling, optimisation, AI, and automation.',
+        'Portfolio of Francisco Abajo Lis, an Applied Mathematics and Applied Physics graduate interested in quantitative analysis, data, modelling, finance, AI, and automation.',
     headerNavLinks: [
         {
             text: 'Home',
@@ -53,8 +53,8 @@ const siteConfig: SiteConfig = {
         }
     ],
     hero: {
-        title: 'Quantitative problem solving, from models to working systems.',
-        text: "I'm **Francisco Abajo Lis**, an Applied Mathematics and Applied Physics graduate based in Madrid. I enjoy turning complex, open-ended problems into clear analyses, dependable software, and practical automation.\n\nI'm interested in early-career opportunities across **quantitative analysis, data, modelling, optimisation, AI, and technical automation**. My experience spans data-driven flow modelling, software validation at ASML, and agentic AI development.",
+        title: 'Quantitative problem-solving that turns data into informed decisions and models into working systems.',
+        text: "I'm **Francisco Abajo Lis**, an Applied Mathematics and Applied Physics graduate based in Madrid. I enjoy turning complex, open-ended problems into clear analyses, dependable software, and practical automation.\n\nI'm interested in early-career opportunities across **quantitative analysis, data, modelling, finance, AI, and technical automation**. My experience spans data-driven flow modelling, software validation at ASML, and agentic AI development.",
         image: {
             src: profilePhoto,
             alt: 'Portrait of Francisco Abajo Lis'

@@ -14,12 +14,14 @@ My background is intentionally broad. I have developed data-driven models for tu
 I am exploring graduate and junior opportunities where quantitative reasoning and software meet real decisions. My interests include:
 
 - Quantitative and data analysis
-- Modelling, simulation, and optimisation
-- Risk and decision-support problems
+- Financial modelling, risk, and decision-support problems
+- Modelling and simulation
 - AI-enabled tools and workflow automation
 - Python-based technical and analytical development
 
 I am more interested in the quality of the problem and the opportunity to learn than in fitting into one narrow label.
+
+Looking further ahead, I plan to pursue a master's degree in quantitative finance or a related field, building on my mathematical and computational background.
 
 ## Skills
 
