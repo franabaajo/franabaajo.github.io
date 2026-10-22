@@ -6,19 +6,25 @@ const certifications = [
 		title: 'Citi Markets Quantitative Analysis (MQA) Job Simulation',
 		issuer: 'Forage · Citi',
 		date: '2 August 2026',
-		description: 'Financial mathematics, commodity pricing, securities structuring, hedging, and market-risk management.'
+		description: 'Financial mathematics, commodity pricing, securities structuring, hedging, and market-risk management.',
+		logo: '/brands/citi.svg',
+		logoAlt: 'Citi'
 	},
 	{
 		title: 'Citi Markets Sales & Trading Job Simulation',
 		issuer: 'Forage · Citi',
 		date: '3 August 2026',
-		description: 'Market-meeting preparation, market wrap-ups, trade pitching, and risk hedging.'
+		description: 'Market-meeting preparation, market wrap-ups, trade pitching, and risk hedging.',
+		logo: '/brands/citi.svg',
+		logoAlt: 'Citi'
 	},
 	{
 		title: 'Project Management Fundamentals',
 		issuer: 'IBM SkillsBuild',
 		date: '7 October 2026',
 		description: 'Foundational project-management training.',
+		logo: '/brands/ibm.svg',
+		logoAlt: 'IBM',
 		href: 'https://www.credly.com/go/Ncn79D2L',
 		linkText: 'Verify credential'
 	},
@@ -26,23 +32,27 @@ const certifications = [
 		title: 'KICKOFF Predictive',
 		issuer: 'Project Management Institute (PMI)',
 		date: 'October 2026',
-		description: 'Predictive project-management training.'
+		description: 'Predictive project-management training.',
+		logo: '/brands/pmi-kickoff.png',
+		logoAlt: 'PMI KICKOFF Predictive badge'
 	},
 	{
 		title: 'Hugging Face Agents Course',
 		issuer: 'Hugging Face',
 		date: '8 October 2026',
 		description: 'AI-agent development with tool use, agentic RAG, and multimodal workflows.',
+		logo: '/brands/huggingface.svg',
+		logoAlt: 'Hugging Face',
 		href: '/projects/gaia-research-agent/',
 		linkText: 'View course project'
 	}
 ];
 
 const languages = [
-	{ language: 'Spanish', level: 'Native', marker: 'ES' },
-	{ language: 'English', level: 'Advanced', marker: 'EN' },
-	{ language: 'French', level: 'Basic', marker: 'FR' },
-	{ language: 'Dutch', level: 'Basic', marker: 'NL' }
+	{ language: 'Spanish', level: 'Native', flag: '/brands/flag-es.svg', flagAlt: 'Flag of Spain' },
+	{ language: 'English', level: 'Advanced', flag: '/brands/flag-gb.svg', flagAlt: 'Flag of the United Kingdom' },
+	{ language: 'French', level: 'Basic', flag: '/brands/flag-fr.svg', flagAlt: 'Flag of France' },
+	{ language: 'Dutch', level: 'Basic', flag: '/brands/flag-nl.svg', flagAlt: 'Flag of the Netherlands' }
 ];
 ---
 
@@ -69,7 +79,7 @@ const languages = [
 				<div class="flex flex-col justify-center p-7 sm:p-10">
 					<p class="text-sm font-medium tracking-wide text-[color:var(--accent)]">2023–2026 · Eindhoven · 225 ECTS</p>
 					<h3 class="mt-2 font-serif text-3xl sm:text-4xl">Two Bachelor's Degrees</h3>
-					<p class="mt-3 max-w-3xl leading-relaxed opacity-75">Completed in parallel at Eindhoven University of Technology in three years.</p>
+					<p class="mt-3 max-w-3xl leading-relaxed opacity-75">Completed a double degree program at Eindhoven University of Technology in three years.</p>
 				</div>
 			</div>
 			<div class="grid gap-5 p-5 sm:grid-cols-2 sm:p-8">
@@ -105,7 +115,10 @@ const languages = [
 		</div>
 		<div class="grid gap-5 md:grid-cols-2">
 			{certifications.map((certificate, index) => (
-				<article class:list={['certificate-card flex flex-col rounded-3xl border border-main/15 bg-muted p-6 sm:p-8', { 'md:col-span-2 md:grid md:grid-cols-[1fr_auto] md:items-end md:gap-12': index === certifications.length - 1 }]}>
+				<article class:list={['certificate-card rounded-3xl border border-main/15 bg-muted p-6 sm:p-8', index === certifications.length - 1 ? 'md:col-span-2 md:grid md:grid-cols-[12rem_1fr_auto] md:items-center md:gap-8' : 'flex flex-col']}>
+					<div class:list={['flex h-20 items-center justify-center rounded-2xl bg-white p-4', index === certifications.length - 1 ? 'mb-6 md:mb-0' : 'mb-6']}>
+						<img class="max-h-12 max-w-full object-contain" src={certificate.logo} alt={certificate.logoAlt} />
+					</div>
 					<div>
 						<div class="flex flex-wrap items-center justify-between gap-2 text-xs font-medium tracking-wide text-[color:var(--accent)]">
 							<span>{certificate.issuer}</span>
@@ -116,7 +129,7 @@ const languages = [
 					</div>
 					{certificate.href && (
 						<a
-							class="mt-6 inline-flex w-fit items-center border-b border-main/40 pb-0.5 font-serif italic hover:border-main"
+							class="mt-6 inline-flex w-fit items-center border-b border-main/40 pb-0.5 font-serif italic hover:border-main md:shrink-0"
 							href={certificate.href}
 							target={certificate.href.startsWith('http') ? '_blank' : undefined}
 							rel={certificate.href.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -137,7 +150,9 @@ const languages = [
 		<div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
 			{languages.map((item) => (
 				<article class="rounded-3xl border border-main/15 bg-muted p-5 sm:p-7">
-					<p class="font-serif text-3xl text-[color:var(--accent)] opacity-45">{item.marker}</p>
+					<div class="flex h-16 items-center justify-start">
+						<img class="max-h-12 w-auto max-w-full rounded-sm shadow-sm" src={item.flag} alt={item.flagAlt} />
+					</div>
 					<h3 class="mt-8 font-serif text-2xl">{item.language}</h3>
 					<p class="mt-1 text-sm opacity-65">{item.level}</p>
 				</article>
