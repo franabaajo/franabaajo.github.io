@@ -37,4 +37,6 @@ Looking further ahead, I plan to pursue a master's degree in quantitative financ
 
 ## How I work
 
+I would describe myself as competitive and curious. I enjoy exploring creative ideas, testing different approaches, and pushing for outstanding results.
+
 I value analytical clarity, careful validation, and maintainable implementation. I am comfortable moving between mathematical ideas, experimental code, documentation, and communication with people from different technical backgrounds.
