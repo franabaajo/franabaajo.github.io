@@ -45,6 +45,14 @@ const certifications = [
 		logoAlt: 'Hugging Face',
 		href: '/projects/gaia-research-agent/',
 		linkText: 'View course project'
+	},
+	{
+		title: "CS50's Introduction to Databases with SQL",
+		issuer: 'Harvard University · CS50',
+		date: 'October 2026',
+		description: 'SQL, relational data modelling, schema design, joins, views, indexes, and query optimisation.',
+		logo: '/brands/cs50.svg',
+		logoAlt: 'CS50 by Harvard University'
 	}
 ];
 
@@ -65,7 +73,7 @@ const languages = [
 		<p class="mb-3 text-xs font-medium tracking-[0.18em] uppercase opacity-60">Academic foundation</p>
 		<h1 class="font-serif text-4xl leading-tight sm:text-6xl">Education</h1>
 		<p class="mt-6 text-lg leading-relaxed opacity-75 sm:text-xl">
-			Two technical bachelor's degrees, complemented by focused training across quantitative finance, project management, and AI agents.
+			Two technical bachelor's degrees, complemented by focused training across quantitative finance, databases, project management, and AI agents.
 		</p>
 	</header>
 
@@ -114,9 +122,9 @@ const languages = [
 			<h2 id="certifications-heading" class="font-serif text-3xl sm:text-4xl">Certifications &amp; Training</h2>
 		</div>
 		<div class="grid gap-5 md:grid-cols-2">
-			{certifications.map((certificate, index) => (
-				<article class:list={['certificate-card rounded-3xl border border-main/15 bg-muted p-6 sm:p-8', index === certifications.length - 1 ? 'md:col-span-2 md:grid md:grid-cols-[12rem_1fr_auto] md:items-center md:gap-8' : 'flex flex-col']}>
-					<div class:list={['flex h-20 items-center justify-center rounded-2xl bg-white p-4', index === certifications.length - 1 ? 'mb-6 md:mb-0' : 'mb-6']}>
+			{certifications.map((certificate) => (
+				<article class="certificate-card flex flex-col rounded-3xl border border-main/15 bg-muted p-6 sm:p-8">
+					<div class="mb-6 flex h-20 items-center justify-center rounded-2xl bg-white p-4">
 						<img class="max-h-12 max-w-full object-contain" src={certificate.logo} alt={certificate.logoAlt} />
 					</div>
 					<div>

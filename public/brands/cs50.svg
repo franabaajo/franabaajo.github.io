@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" role="img" aria-labelledby="title desc">
+  <title id="title">CS50</title>
+  <desc id="desc">CS50 course mark in Harvard crimson</desc>
+  <rect width="480" height="160" rx="24" fill="#a51c30"/>
+  <text x="240" y="91" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700" letter-spacing="2" text-anchor="middle">CS50</text>
+  <text x="240" y="126" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" letter-spacing="4" text-anchor="middle">HARVARD UNIVERSITY</text>
+</svg>
